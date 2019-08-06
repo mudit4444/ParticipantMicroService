@@ -1,5 +1,4 @@
-package com.example.model;
-
+package com.example.demo.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "participant_dummy")
+@Table(name = "participant" , schema = "mymicroservice")
 public class ParticipantEntity {
 	@Id
 	@Column(name="id")
@@ -26,6 +25,17 @@ public class ParticipantEntity {
 		
 	}
 	
+	
+	
+	public ParticipantEntity(String firstName, String lastName, String phoneNumber) {
+		//super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phoneNumber = phoneNumber;
+	}
+
+
+
 	public ParticipantEntity(String id, String firstName, String lastName, String phoneNumber) {
 		//super();
 		this.id = id;
