@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "participant" , schema = "mymicroservice")
+@Table(name = "participant_master" , schema = "mymicroservice")
 public class ParticipantEntity {
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
 	
-	@Column(name="firstName")
+	//@Column(name="firstName")
 	private String firstName;
-	@Column(name= "lastName")
+	//@Column(name= "lastName")
 	private String lastName;
-	@Column(name="phoneNumber")
+	//@Column(name="phoneNumber")
 	private String phoneNumber;
 	
 	public ParticipantEntity() {
