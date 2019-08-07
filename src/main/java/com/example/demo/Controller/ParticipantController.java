@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //import com.example.Repository.ParticipantRepository;
@@ -32,7 +33,7 @@ public class ParticipantController{
 	
 	
 	@RequestMapping("/search/{id}")
-	public ParticipantEntity searchParticipant(@PathVariable String id) {
+	public List<ParticipantEntity> searchParticipant(@PathVariable String id) {
 		
 		log.info("Participant list for specific id" +id +" is being returned");
 		//logic to write and return a value on being called
